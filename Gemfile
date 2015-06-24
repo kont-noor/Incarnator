@@ -12,3 +12,21 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
+gem 'rspec-rails'
+gem 'factory_girl_rails'
+gem 'pry-rails'
+gem 'foreigner'
+
+gem 'bootstrap-sass'
+gem 'sass-rails'
+gem 'jquery-rails'
+
+group :test do
+  gem 'shoulda'
+  gem 'simplecov'
+  gem 'capybara'
+end
+
+group :development do
+  gem 'quiet_assets'
+end
