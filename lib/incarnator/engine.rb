@@ -1,3 +1,5 @@
+require "devise"
+
 module Incarnator
   class Engine < ::Rails::Engine
     isolate_namespace Incarnator
