@@ -1,3 +1,3 @@
 Incarnator.setup do |config|
-  config.account_model = "Initializer::Account"
+  config.account_model = "Incarnator::Account"
 end
