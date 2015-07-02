@@ -1,3 +1,17 @@
 = Incarnator
 
 Versatile authencitatable user models set.
+
+== Usage
+
+To install the incarnator add the following line to `Gemfile`
+
+  gem 'incarnator', git: 'https://github.com/kont-noor/incarnator'
+
+Then setup it with the command
+
+  rails g incarnator:install
+
+Then edit `config/initializers/incarnator.rb` and mount engine at `config/routes.rb` if needed
+
+  mount Incarnator::Engine, at: "/incarnator"
