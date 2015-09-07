@@ -3,6 +3,7 @@ PATH
   specs:
     incarnator (0.0.1)
       devise (~> 3.4)
+      gravtastic
       rails (~> 4.2)
 
 GEM
@@ -59,7 +60,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     coderay (1.1.0)
-    devise (3.5.1)
+    devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -77,8 +78,9 @@ GEM
       railties (>= 3.0.0)
     foreigner (1.7.4)
       activerecord (>= 3.0.0)
-    globalid (0.3.5)
+    globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gravtastic (3.2.6)
     i18n (0.7.0)
     jquery-rails (4.0.4)
       rails-dom-testing (~> 1.0)
