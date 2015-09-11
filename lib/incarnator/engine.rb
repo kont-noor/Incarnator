@@ -1,4 +1,5 @@
 require "devise"
+require "gravtastic"
 
 module Incarnator
   class Engine < ::Rails::Engine
