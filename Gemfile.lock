@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     incarnator (0.0.1)
-      devise (~> 3.4)
+      devise (= 3.5.1)
       gravtastic
       rails (~> 4.2)
 
@@ -60,7 +60,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     coderay (1.1.0)
-    devise (3.5.2)
+    devise (3.5.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
