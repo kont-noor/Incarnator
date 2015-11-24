@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124210415) do
+ActiveRecord::Schema.define(version: 20151124211951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,17 @@ ActiveRecord::Schema.define(version: 20151124210415) do
   add_index "incarnator_accounts", ["reset_password_token"], name: "index_incarnator_accounts_on_reset_password_token", unique: true, using: :btree
   add_index "incarnator_accounts", ["user_name"], name: "index_incarnator_accounts_on_user_name", unique: true, using: :btree
 
+  create_table "incarnator_accounts_roles", force: :cascade do |t|
+    t.integer  "account_id", null: false
+    t.integer  "role_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "incarnator_accounts_roles", ["account_id", "role_id"], name: "index_incarnator_accounts_roles_on_account_id_and_role_id", unique: true, using: :btree
+  add_index "incarnator_accounts_roles", ["account_id"], name: "index_incarnator_accounts_roles_on_account_id", using: :btree
+  add_index "incarnator_accounts_roles", ["role_id"], name: "index_incarnator_accounts_roles_on_role_id", using: :btree
+
   create_table "incarnator_roles", force: :cascade do |t|
     t.string   "name",        default: "", null: false
     t.string   "description"
@@ -53,4 +64,6 @@ ActiveRecord::Schema.define(version: 20151124210415) do
 
   add_index "incarnator_roles", ["name"], name: "index_incarnator_roles_on_name", unique: true, using: :btree
 
+  add_foreign_key "incarnator_accounts_roles", "incarnator_accounts", column: "account_id"
+  add_foreign_key "incarnator_accounts_roles", "incarnator_roles", column: "role_id"
 end

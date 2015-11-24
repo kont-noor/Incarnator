@@ -15,7 +15,6 @@ gemspec
 gem 'rspec-rails'
 gem 'factory_girl_rails'
 gem 'pry-rails'
-gem 'foreigner'
 
 gem 'bootstrap-sass'
 gem 'sass-rails'
