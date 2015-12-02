@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150625144542) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "incarnator_accounts", force: true do |t|
+  create_table "incarnator_accounts", force: :cascade do |t|
     t.string   "user_name",              default: "", null: false
     t.string   "first_name"
     t.string   "middle_name"
@@ -44,5 +44,4 @@ ActiveRecord::Schema.define(version: 20150625144542) do
   add_index "incarnator_accounts", ["reset_password_token"], name: "index_incarnator_accounts_on_reset_password_token", unique: true, using: :btree
   add_index "incarnator_accounts", ["user_name"], name: "index_incarnator_accounts_on_user_name", unique: true, using: :btree
 
-  Foreigner.load
 end
