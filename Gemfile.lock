@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    incarnator (0.0.1)
+    incarnator (0.0.1.1)
       devise (= 3.5.1)
       gravtastic
       rails (>= 4.0.1)
